@@ -3,134 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wanderlust | Luxury Expeditions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root { --accent: #03e9f4; --bg: #050801; }
+        body {
+            margin: 0; display: flex; justify-content: center; align-items: center;
+            height: 100vh; background: var(--bg); font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .enter-btn {
+            position: relative; display: inline-block; padding: 25px 40px;
+            color: var(--accent); text-transform: uppercase; letter-spacing: 8px;
+            text-decoration: none; overflow: hidden; transition: 0.5s;
+            border: 1px solid rgba(3, 233, 244, 0.2); font-weight: 800;
+        }
+        .enter-btn:hover {
+            background: var(--accent); color: #050801;
+            box-shadow: 0 0 50px var(--accent); border-color: var(--accent);
+        }
+        .enter-btn span { position: absolute; display: block; }
+        .enter-btn span:nth-child(1) { top: 0; left: -100%; width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--accent)); animation: anim1 1s linear infinite; }
+        @keyframes anim1 { 50%, 100% { left: 100%; } }
+        .enter-btn span:nth-child(2) { top: -100%; right: 0; width: 2px; height: 100%; background: linear-gradient(180deg, transparent, var(--accent)); animation: anim2 1s linear infinite; animation-delay: .25s; }
+        @keyframes anim2 { 50%, 100% { top: 100%; } }
+        .enter-btn span:nth-child(3) { bottom: 0; right: -100%; width: 100%; height: 2px; background: linear-gradient(270deg, transparent, var(--accent)); animation: anim3 1s linear infinite; animation-delay: .5s; }
+        @keyframes anim3 { 50%, 100% { right: 100%; } }
+        .enter-btn span:nth-child(4) { bottom: -100%; left: 0; width: 2px; height: 100%; background: linear-gradient(360deg, transparent, var(--accent)); animation: anim4 1s linear infinite; animation-delay: .75s; }
+        @keyframes anim4 { 50%, 100% { bottom: 100%; } }
+    </style>
 </head>
-<style>
-    @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: #050801;
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-}
-a {
-  position: relative;
-  display: inline-block;
-  padding: 25px 30px;
-  margin: 40px 0;
-  color: #03e9f4;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: 0.5s;
-  letter-spacing: 4px;
-  overflow: hidden;
-  margin-right: 50px;
-}
-a:hover {
-  background: #03e9f4;
-  color: #050801;
-  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
-    0 0 200px #03e9f4;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-}
-a:nth-child(1) {
-  filter: hue-rotate(270deg);
-}
-a:nth-child(2) {
-  filter: hue-rotate(110deg);
-}
-a span {
-  position: absolute;
-  display: block;
-}
-a span:nth-child(1) {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #03e9f4);
-  animation: animate1 1s linear infinite;
-}
-@keyframes animate1 {
-  0% {
-    left: -100%;
-  }
-  50%,
-  100% {
-    left: 100%;
-  }
-}
-a span:nth-child(2) {
-  top: -100%;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(180deg, transparent, #03e9f4);
-  animation: animate2 1s linear infinite;
-  animation-delay: 0.25s;
-}
-@keyframes animate2 {
-  0% {
-    top: -100%;
-  }
-  50%,
-  100% {
-    top: 100%;
-  }
-}
-a span:nth-child(3) {
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg, transparent, #03e9f4);
-  animation: animate3 1s linear infinite;
-  animation-delay: 0.5s;
-}
-@keyframes animate3 {
-  0% {
-    right: -100%;
-  }
-  50%,
-  100% {
-    right: 100%;
-  }
-}
-
-a span:nth-child(4) {
-  bottom: -100%;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(360deg, transparent, #03e9f4);
-  animation: animate4 1s linear infinite;
-  animation-delay: 0.75s;
-}
-@keyframes animate4 {
-  0% {
-    bottom: -100%;
-  }
-  50%,
-  100% {
-    bottom: 100%;
-  }
-}
-
-</style>
 <body>
-    <a href="index.html">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Click me to enter homepage!
+    <a href="index.html" class="enter-btn">
+        <span></span><span></span><span></span><span></span>
+        Enter Expedition
+    </a>
 </body>
 </html>
